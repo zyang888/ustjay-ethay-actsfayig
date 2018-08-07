@@ -19,7 +19,8 @@ def get_fact():
 
 @app.route('/')
 def home():
-    return "FILL ME!"
+	response = requests.post('https://hidden-journey-62459.herokuapp.com/piglatinize/', data = {'input_text':get_fact()})
+	return '<a href={}>{}</a>'.format(response.url,response.url)
 
 
 if __name__ == "__main__":
