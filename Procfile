@@ -1,1 +1,1 @@
-web: gunicorn main.py:Request_App
+web: gunicorn main:app
